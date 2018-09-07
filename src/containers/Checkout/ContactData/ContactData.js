@@ -118,7 +118,7 @@ class ContactData extends Component{
         } 
         const order = {
             ingredients: this.props.ingredients,
-            price: this.props.price,
+            price: Number.parseFloat(this.props.price).toFixed(2),
             orderData: formData
         }
         axios.post('/orders.json', order)
